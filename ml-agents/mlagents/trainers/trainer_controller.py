@@ -169,10 +169,10 @@ class TrainerController:
         self._create_output_path(self.output_path)
         try:
             # Initial reset
-            self._reset_env(env_manager)
+            self._reset_env(env_manager) # First set of initil observations collected here
             self.param_manager.log_current_lesson()
             while self._not_done_training():
-                n_steps = self.advance(env_manager)
+                n_steps = self.advance(env_manager).  # the advance() method of this Trainer Controller class is responsible for collecting the obs. and passing them to the model to train on... 
                 for _ in range(n_steps):
                     self.reset_env_if_ready(env_manager)
             # Stop advancing trainers
@@ -226,13 +226,15 @@ class TrainerController:
         elif updated:
             env.set_env_parameters(self.param_manager.get_current_samplers())
 
+# gathered obs. are processed here and the env. advances by a step
     @timed
     def advance(self, env_manager: EnvManager) -> int:
         # Get steps
         with hierarchical_timer("env_step"):
             new_step_infos = env_manager.get_steps()
-            self._register_new_behaviors(env_manager, new_step_infos)
-            num_steps = env_manager.process_steps(new_step_infos)
+            self._register_new_behaviors(env_manager, new_step_infos) # any new behaviours detected in the env are registered, not of our concern here afaik
+            num_steps = env_manager.process_steps(new_step_infos) # The gathered observations are processed. Each trainer has an associated AgentManager which has a trajectory queue, the process_steps() function puts the step results into the appropriate trajectory queue.
+            # again, in our case, we can just replace this with a blank function as we don't need this functinality i believe
 
         # Report current lesson for each environment parameter
         for (

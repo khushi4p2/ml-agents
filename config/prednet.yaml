@@ -1,0 +1,3 @@
+behaviors:
+  MyBehavior:
+    trainer_type: prednet
