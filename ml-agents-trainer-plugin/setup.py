@@ -13,6 +13,7 @@ setup(
         ML_AGENTS_TRAINER_TYPE: [
             "a2c=mlagents_trainer_plugin.a2c.a2c_trainer:get_type_and_setting",
             "dqn=mlagents_trainer_plugin.dqn.dqn_trainer:get_type_and_setting",
+            "prednet=mlagents_trainer_plugin.prednet.prednet_trainer:get_type_and_setting"
         ]
     },
 )
