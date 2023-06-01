@@ -1,0 +1,3 @@
+behaviors:
+  YourAgent:
+    trainer_type: prednet
