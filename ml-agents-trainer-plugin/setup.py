@@ -1,6 +1,8 @@
 from setuptools import setup
 from mlagents.plugins import ML_AGENTS_TRAINER_TYPE
 
+print("This is the setup script.")
+
 setup(
     name="mlagents_trainer_plugin",
     version="0.0.1",
