@@ -6,6 +6,8 @@ from mlagents_envs.base_env import BehaviorSpec
 from mlagents.trainers.behavior_id_utils import BehaviorIdentifiers
 from .prednet_setting import PrednetSettings
 
+print("This is the PrednetTrainer script.")
+
 class PrednetTrainer(Trainer):
 
     def __init__(
@@ -20,6 +22,8 @@ class PrednetTrainer(Trainer):
         super().__init__(brain_name, trainer_settings, training, load, seed, artifact_path)
         self.policies: Dict[str, Policy] = {}
 
+        print("Hello, world!")
+
     @staticmethod
     def get_trainer_name() -> str:
         return "prednet"
@@ -31,6 +35,7 @@ class PrednetTrainer(Trainer):
     ) -> Policy:
         if behavior_spec.is_visual():
             print("Hello, world!")
+        # print("Hello, world!")
         
         # Create and return your PredNet policy here
 
