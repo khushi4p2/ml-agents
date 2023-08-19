@@ -1,0 +1,3 @@
+behaviors:
+  PredictionAgent:
+    trainer_type: prednet

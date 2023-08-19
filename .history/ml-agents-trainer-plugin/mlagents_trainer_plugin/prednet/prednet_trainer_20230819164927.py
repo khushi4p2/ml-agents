@@ -11,7 +11,7 @@ from mlagents_envs.logging_util import get_logger
 from mlagents.trainers.trainer.off_policy_trainer import OffPolicyTrainer
 from mlagents.trainers.trajectory import Trajectory
 from mlagents.trainers.optimizer.torch_optimizer import TorchOptimizer
-from .prednet_setting import PrednetSettings, PrednetOptimizer, QNetwork
+from .prednet_setting import PrednetSettings, PrednetOptimizer, 
 
 logger = get_logger(__name__)
 TRAINER_NAME = "prednet"

@@ -303,3 +303,6 @@ class QNetwork(nn.Module, Actor, Critic):
             action_out = AgentAction(None, [action_out])
             run_out["env_action"] = action_out.to_action_tuple()
         return action_out, run_out, torch.Tensor([])
+    
+# class PrednetTrainerSettings(TrainerSettings):
+#     hyperparameters = PrednetSettings()

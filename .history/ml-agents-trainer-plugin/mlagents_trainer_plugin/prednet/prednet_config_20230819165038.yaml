@@ -1,6 +1,4 @@
-# behaviors:
-#   PredictionAgent:
-#     trainer_type: prednet
+# 
 behaviors:
   PredictionAgent:
     trainer_type: prednet
