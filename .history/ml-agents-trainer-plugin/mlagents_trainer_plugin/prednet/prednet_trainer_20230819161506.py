@@ -6,9 +6,6 @@ from mlagents_envs.base_env import BehaviorSpec
 from mlagents.trainers.behavior_id_utils import BehaviorIdentifiers
 from .prednet_setting import PrednetSettings
 
-logger = get_logger(__name__)
-TRAINER_NAME = "prednet"
-
 print("This is the PrednetTrainer script.")
 
 class PrednetTrainer(Trainer):
