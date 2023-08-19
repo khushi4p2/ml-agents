@@ -62,17 +62,17 @@ class PrednetTrainer(OffPolicyTrainer):
         """
         Takes a trajectory and processes it, putting it into the replay buffer.
         """
-        for index, obs_spec in enumerate(spec.observation_specs):
-            if len(obs_spec.shape) == 3:
-                print("Here is the first visual observation")
-                plt.imshow(decision_steps.obs[index][0,:,:,:])
-                plt.show()
+        # print("Hello, World 2")
 
         for index, obs_spec in enumerate(spec.observation_specs):
-            if len(obs_spec.shape) == 1:
-                print("First vector observations : ", decision_steps.obs[index][0,:])
-        
-        print("Hello, World 2")
+        if len(obs_spec.shape) == 3:
+            print("Here is the first visual observation")
+            plt.imshow(decision_steps.obs[index][0,:,:,:])
+            plt.show()
+
+        for index, obs_spec in enumerate(spec.observation_specs):
+        if len(obs_spec.shape) == 1:
+            print("First vector observations : ", decision_steps.obs[index][0,:])
         # return None
 
 # NOT REQUIRED

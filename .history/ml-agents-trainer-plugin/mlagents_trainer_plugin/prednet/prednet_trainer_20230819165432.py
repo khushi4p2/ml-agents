@@ -72,7 +72,7 @@ class PrednetTrainer(OffPolicyTrainer):
             if len(obs_spec.shape) == 1:
                 print("First vector observations : ", decision_steps.obs[index][0,:])
         
-        print("Hello, World 2")
+            # print("Hello, World 2")
         # return None
 
 # NOT REQUIRED

@@ -11,7 +11,6 @@ from mlagents_envs.logging_util import get_logger
 from mlagents.trainers.trainer.off_policy_trainer import OffPolicyTrainer
 from mlagents.trainers.trajectory import Trajectory
 from mlagents.trainers.optimizer.torch_optimizer import TorchOptimizer
-import matplotlib.pyplot as plt
 from .prednet_setting import PrednetSettings, PrednetOptimizer, QNetwork
 
 logger = get_logger(__name__)
@@ -62,18 +61,9 @@ class PrednetTrainer(OffPolicyTrainer):
         """
         Takes a trajectory and processes it, putting it into the replay buffer.
         """
-        for index, obs_spec in enumerate(spec.observation_specs):
-            if len(obs_spec.shape) == 3:
-                print("Here is the first visual observation")
-                plt.imshow(decision_steps.obs[index][0,:,:,:])
-                plt.show()
-
-        for index, obs_spec in enumerate(spec.observation_specs):
-            if len(obs_spec.shape) == 1:
-                print("First vector observations : ", decision_steps.obs[index][0,:])
-        
         print("Hello, World 2")
-        # return None
+        
+        return None
 
 # NOT REQUIRED
     def create_optimizer(self)->TorchOptimizer:
