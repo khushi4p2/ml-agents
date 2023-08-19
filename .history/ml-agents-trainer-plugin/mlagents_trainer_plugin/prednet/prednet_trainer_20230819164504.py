@@ -5,12 +5,11 @@ from mlagents.trainers.settings import TrainerSettings
 from mlagents.trainers.policy import Policy
 from mlagents.trainers.policy.torch_policy import TorchPolicy
 # important
+from .prednet_setting import PrednetSettings
+# important
 from mlagents_envs.base_env import BehaviorSpec
 from mlagents.trainers.behavior_id_utils import BehaviorIdentifiers
 from mlagents_envs.logging_util import get_logger
-from mlagents.trainers.trainer.off_policy_trainer import OffPolicyTrainer
-from mlagents.trainers.trajectory import Trajectory
-from mlagents.trainers.optimizer.torch_optimizer import TorchOptimizer
 from .prednet_setting import PrednetSettings
 
 logger = get_logger(__name__)
@@ -18,7 +17,7 @@ TRAINER_NAME = "prednet"
 
 print("This is the PrednetTrainer script.")
 
-class PrednetTrainer(OffPolicyTrainer):
+class PrednetTrainer(Trainer):
 
     def __init__(
         self,
