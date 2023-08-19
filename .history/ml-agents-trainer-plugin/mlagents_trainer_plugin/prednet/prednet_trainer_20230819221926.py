@@ -191,3 +191,8 @@ def get_type_and_setting():
     return {PrednetTrainer.get_trainer_name(): PrednetTrainer}, {
         PrednetTrainer.get_trainer_name(): PrednetSettings
     }
+
+# def get_type_and_setting():
+#     return {PrednetTrainer.get_trainer_name(): PrednetTrainer}, {
+#         PrednetTrainer.get_trainer_name(): PrednetSettings
+#     }

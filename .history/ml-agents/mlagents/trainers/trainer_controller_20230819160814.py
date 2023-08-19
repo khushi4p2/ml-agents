@@ -119,7 +119,6 @@ class TrainerController:
         parsed_behavior_id = BehaviorIdentifiers.from_name_behavior_id(name_behavior_id)
         brain_name = parsed_behavior_id.brain_name
         trainerthread = None
-        print(brain_name)
         if brain_name in self.trainers:
             trainer = self.trainers[brain_name]
         else:
