@@ -98,7 +98,6 @@ def run_training(run_seed: int, options: RunOptions, num_areas: int) -> None:
             port = None
 
         print(options)
-        
         env_factory = create_environment_factory(
             env_settings.env_path,
             engine_settings.no_graphics,
